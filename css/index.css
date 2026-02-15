@@ -1,0 +1,11 @@
+@media screen{
+ #body{background:black;color:white}
+ #page0{border:}
+.r{border:1px solid white}
+.rc0{border-right:1px solid white}
+.rc1{border-left:1px solid white}
+.rc1r0{border-bottom:1px solid white}
+.dUnit{border-right:}
+.time{border-bottom:1px solid white}
+#sheet{border:1px solid white}
+}
