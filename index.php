@@ -73,6 +73,7 @@ $listSize = count($allClientData);
             <div id="" style="width:98%;height:fit-content;position:absolute;top:120px;left:10px;">
                 <textarea id="inp12" class="inp" cols="40" rows="20" style="width:100%;height:350px;border:;font-size:21px"></textarea>
             </div>
+            <button id="clearBtn" class="btn"  style="width:100px;height:50px;border-round:10px;border:1px solid white;position:absolute;top:480px;left:80%;">clear</button>
         </div><!--end of mc1----------------------->
     </div><!--end of mid----------------------->
         <script>
@@ -109,12 +110,12 @@ $listSize = count($allClientData);
             return res.json()
         })
         .then(data=>{
-            console.log(data);
+            //console.log(data);
  
             for(let i=0;i<13;i++)
             {
                 inpObj[i] = document.getElementById('inp'+i);
-                console.log('inpObj['+i+']='+inpObj[i]);
+                //console.log('inpObj['+i+']='+inpObj[i]);
                 switch(i){
                     case 0:
                         inpObj[0].value = data[0];
@@ -418,7 +419,21 @@ $listSize = count($allClientData);
 
 
     })
-})    
+ 
+ //////////////////////////////////clear data//////////////////////////////////////////////////
+const clearObj = document.getElementById('clearBtn');
+console.log(clearObj);
+clearObj.addEventListener('click',function(){
+    clearObj.style.background = "orange";
+    inpObj = document.querySelectorAll('.inp');
+    for(let i=0;i<13;i++)
+    {
+        inpObj[i] = document.getElementById('inp'+i);
+        console.log(inpObj[i]);
+        inpObj[i].value = "";
+    }
+})
+})
     </script>
 </boby>
 </html>
